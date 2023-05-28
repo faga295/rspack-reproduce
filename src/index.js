@@ -1,3 +1,3 @@
-const a = 'nswer'
+import './index.css'
 
-console.log(require(`./a${a}.js`).answer)
+console.log("Hello world");

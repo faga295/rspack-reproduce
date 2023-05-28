@@ -1,51 +1,16 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/answer.js":
+/***/ "./src/index.css":
 /*!***********************!*\
-  !*** ./src/answer.js ***!
+  !*** ./src/index.css ***!
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "answer": () => (/* binding */ answer)
-/* harmony export */ });
-const answer = 42;
+// extracted by mini-css-extract-plugin
 
-
-/***/ }),
-
-/***/ "./src sync recursive ^\\.\\/a.*\\.js$":
-/*!*********************************!*\
-  !*** ./src/ sync ^\.\/a.*\.js$ ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./answer.js": "./src/answer.js"
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "./src sync recursive ^\\.\\/a.*\\.js$";
 
 /***/ })
 
@@ -76,23 +41,6 @@ webpackContext.id = "./src sync recursive ^\\.\\/a.*\\.js$";
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -111,10 +59,13 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-const a = 'nswer'
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
 
-console.log(__webpack_require__("./src sync recursive ^\\.\\/a.*\\.js$")(`./a${a}.js`).answer)
+
+console.log("Hello world");
 })();
 
 /******/ })()
 ;
+//# sourceMappingURL=sourcemap/main.map
