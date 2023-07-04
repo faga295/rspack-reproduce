@@ -1,5 +1,6 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import MyPlugin from "./plugin.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isRunningWebpack = !!process.env.WEBPACK;
@@ -37,6 +38,7 @@ const config = {
       "./answer": path.resolve(__dirname, "./src/answer.js?raw"),
     },
   },
+  plugins: [new MyPlugin()]
 };
 
 export default config;
