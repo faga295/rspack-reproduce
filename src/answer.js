@@ -1,1 +1,3 @@
-export const answer = 42;
+export default function a() {
+    return 'a' + __resourceQuery
+}
