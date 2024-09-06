@@ -1,5 +1,6 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isRunningWebpack = !!process.env.WEBPACK;
@@ -15,27 +16,18 @@ const config = {
   mode: "development",
   devtool: false,
   entry: {
-    main: "./src/index.js",
+    main: "./src/index",
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        resourceQuery: /raw/,
-        type: "asset/source",
-      },
-    ],
-  },
+  plugins: [new HtmlWebpackPlugin()],
   output: {
+    clean: true,
     path: isRunningWebpack
       ? path.resolve(__dirname, "webpack-dist")
       : path.resolve(__dirname, "rspack-dist"),
-    filename: "main.js",
+    filename: "[name].js",
   },
-  resolve: {
-    alias: {
-      "./answer": path.resolve(__dirname, "./src/answer.js?raw"),
-    },
+  experiments: {
+    css: true,
   },
 };
 
