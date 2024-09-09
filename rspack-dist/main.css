@@ -1,0 +1,10 @@
+/* #region "./src/style.css" */
+/*
+- type: css/auto
+*/
+body {
+    background: red;
+}
+/* #endregion "./src/style.css" */
+
+head{--webpack-rspack-repro-main:&\.\/src\/style\.css;}
